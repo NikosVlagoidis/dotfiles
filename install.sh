@@ -10,6 +10,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Bunch of symlinks
 
 ln -sfv "$DOTFILES_DIR/linux/.bashrc" ~
+ln -sfv "$DOTFILE_DIR/linux/.inputrc" ~
 
 # Install Bash-it
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it

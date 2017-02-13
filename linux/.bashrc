@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
 
-
-
-# Make Tab autocomplete regardless of filename case
-set completion-ignore-case on
-
-# List all matches in case multiple possible completions are possible
-set show-all-if-ambiguous on
-
-
 #Aliases
 alias gitgrafs='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 alias l="ls -la"       # List in long format, include dotfiles
