@@ -18,3 +18,16 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --silent
 
 
+while true; do
+	read -p "Do you wish to install Python tools?" yn
+	case $yn in
+		[Yy]* ) echo "Installing python tools";
+			sudo apt-get install python-pip;
+			pip install virtualenv;
+			pip install virtualenvwrapper;
+			break;;
+		[Nn]* ) break;;
+		* ) "Please answer with a yes or a no" ;;
+	esac
+done
+

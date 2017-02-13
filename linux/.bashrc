@@ -19,6 +19,9 @@ function mk() {
 
 
 export EDITOR="vim"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 
  #Path to the bash it configuration
