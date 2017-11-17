@@ -8,6 +8,7 @@ alias ld="ls -ld */"   # List in long format, only directories
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias dc='docker-compose'
 
 #Functions
 # Create a new directory and enter it
@@ -29,7 +30,7 @@ export BASH_IT="/home/nikos/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='duru'
+export BASH_IT_THEME='powerline'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
@@ -80,3 +81,10 @@ complete -o default -F _pip_completion pip
 
 export WORKON_HOME=/home/nikos/.virtualenvs
 export PIP_VIRTUALENV_BASE=/home/nikos/.virtualenvs
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__docker_machine_ps1 " [%s]")\$ '
+
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__docker_machine_ps1 " [%s]")\$ '
+
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$(__docker_machine_ps1 " [%s]")$PS1"
+PS1="\n$PS1"
